@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:c="http://www.springframework.org/schema/c"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    <bean id="dob" class="java.util.Date" p:year="90" p:month="3" p:date="23"/>
+    <bean id="doj" class="java.util.Date" />
+    
+    <bean id="emp" class="in.ineuron.comp.Employee" p:id="22" p:name="Chandan" 
+    		p:address="Bettiah" p:dob-ref="dob" p:dept-ref="dept"/>
+    
+    <bean id="dept" class="in.ineuron.comp.Department" c:dno="11" c:name="CS" c:doj-ref="doj"/>
+    
+</beans>
